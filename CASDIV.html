@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groupe CASDIV - Adhésion et Règlement Intérieur</title>
+    <!-- Style CSS Dynamique et Responsive -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        #loading {
+            display: none;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            text-align: center;
+            padding-top: 15%;
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        /* Animation de la page de chargement */
+        #loading::after {
+            content: "Chargement en cours...";
+            animation: loadingAnimation 1.5s infinite;
+        }
+
+        @keyframes loadingAnimation {
+            0% { content: "Chargement en cours..."; }
+            50% { content: "Chargement..."; }
+            100% { content: "Chargement en cours..."; }
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.8em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .content {
+            padding: 40px;
+            background-color: white;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .page {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        h2 {
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 15px;
+            display: block;
+        }
+
+        input[type="text"], input[type="date"], input[type="tel"], input[type="email"], select, textarea {
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .checkbox-group {
+            margin: 10px 0;
+        }
+
+        .checkbox-group label {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            margin-top: 20px;
+            display: block;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+                margin: 10px;
+                max-width: 90%;
+            }
+
+            header {
+                font-size: 1.5em;
+            }
+
+            button {
+                font-size: 1em;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                font-size: 1.2em;
+            }
+
+            button {
+                padding: 8px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>Groupe CASDIV</header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#" onclick="loadPage('reglement')">Règlement Intérieur</a>
+        <a href="#" onclick="loadPage('formulaire')">Formulaire d'Adhésion</a>
+    </nav>
+
+    <!-- Contenu -->
+    <div id="reglement" class="content page active">
+        <h2>Règlement Intérieur du Groupe CASDIV</h2>
+        <h3>1. Objectif et Mission</h3>
+        <p>Le groupe CASDIV a pour mission de glorifier Dieu à travers la musique, de proclamer l'Évangile, et d'encourager les croyants dans leur marche chrétienne.</p>
+
+        <h3>2. Comportement et Conduite</h3>
+        <ul>
+            <li><strong>Respect et Fraternité</strong> : Chaque membre doit traiter les autres avec respect et amour fraternel, comme enseigné dans les Écritures.</li>
+            <li><strong>Engagement Spirituel</strong> : Les membres doivent s'engager à participer activement aux prières et aux méditations bibliques organisées par le groupe.</li>
+            <li><strong>Attitude Positive</strong> : Les critiques doivent être constructives et faites dans l'amour. Aucun comportement injurieux ou attitude négative ne sera toléré.</li>
+        </ul>
+
+        <h3>3. Tenue Vestimentaire</h3>
+        <ul>
+            <li><strong>Décence et Modestie</strong> : Les tenues doivent refléter la sobriété et la modestie. Toute tenue provocante ou inappropriée est interdite, aussi bien pendant les répétitions que lors des prestations publiques.</li>
+            <li><strong>Uniforme du Groupe</strong> : Lors des prestations, tous les membres devront porter l'uniforme officiel du groupe ou une tenue convenue à l'avance pour l'unité visuelle.</li>
+        </ul>
+
+        <h3>4. Participation et Ponctualité</h3>
+        <ul>
+            <li><strong>Répétitions</strong> : Chaque membre est tenu de participer aux répétitions prévues. Tout retard ou absence doit être justifié à l'avance.</li>
+            <li><strong>Ponctualité</strong> : Il est impératif d'arriver à l'heure pour toutes les activités du groupe. Trois retards non justifiés peuvent entraîner une sanction.</li>
+        </ul>
+
+        <h3>5. Engagement et Assiduité</h3>
+        <ul>
+            <li><strong>Engagement de Service</strong> : Les membres doivent s’engager à servir fidèlement dans le groupe. Un membre ne peut s’engager dans un autre groupe musical sans l’approbation des responsables.</li>
+            <li><strong>Présence Obligatoire</strong> : Les membres doivent être présents à toutes les activités importantes (répétitions générales, concerts, cultes, retraites, etc.), sauf en cas d'empêchement légitime.</li>
+        </ul>
+
+        <h3>6. Discipline</h3>
+        <ul>
+            <li><strong>Sanctions</strong> : Tout comportement contraire à ce règlement entraînera des sanctions allant de l'avertissement verbal à l'exclusion temporaire ou définitive du groupe.</li>
+            <li><strong>Règlement des conflits</strong> : Les différends entre membres doivent être résolus dans un esprit de prière et de paix, avec l'aide des responsables si nécessaire.</li>
+        </ul>
+
+        <h3>7. Finances</h3>
+        <ul>
+            <li><strong>Cotisations</strong> : Chaque membre doit s’acquitter d’une cotisation mensuelle pour les besoins financiers du groupe (achat d’instruments, frais de déplacement, etc.).</li>
+            <li><strong>Transparence</strong> : Les finances seront gérées avec transparence, et un rapport financier sera présenté à la fin de chaque semestre.</li>
+        </ul>
+    </div>
+
+    <div id="formulaire" class="content page">
+        <h2>Formulaire d'Adhésion CASDIV</h2>
+        <form id="adhesionForm">
+            <h3>Informations Personnelles</h3>
+            <label for="name">Nom Complet :</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="dob">Date de Naissance :</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="gender">Sexe :</label>
+            <select id="gender" name="gender" required>
+                <option value="">--Choisir--</option>
+                <option value="Masculin">Masculin</option>
+                <option value="Féminin">Féminin</option>
+            </select>
+
+            <label for="address">Adresse :</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="phone">Téléphone :</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <h3>Informations Spirituelles</h3>
+            <label for="faith">Confession de Foi :</label>
+            <input type="text" id="faith" name="faith" required>
+
+            <label for="church">Église d'Appartenance :</label>
+            <input type="text" id="church" name="church" required>
+
+            <label for="christianDuration">Depuis combien de temps êtes-vous chrétien ? :</label>
+            <input type="text" id="christianDuration" name="christianDuration" required>
+
+            <label>Baptisé(e) ? :</label>
+            <div class="checkbox-group">
+                <label><input type="radio" name="baptized" value="Oui" required> Oui</label>
+                <label><input type="radio" name="baptized" value="Non" required> Non</label>
+            </div>
+
+            <label for="musicalActivity">Êtes-vous engagé(e) dans une autre activité musicale ou chorale ? Si oui, laquelle ? :</label>
+            <input type="text" id="musicalActivity" name="musicalActivity">
+
+            <h3>Motivation</h3>
+            <label for="motivation">Pourquoi souhaitez-vous rejoindre CASDIV ? :</label>
+            <textarea id="motivation" name="motivation" rows="4" required></textarea>
+
+            <label for="skills">Quel est votre talent musical ? (Chant, instrument, etc.) :</label>
+            <input type="text" id="skills" name="skills" required>
+
+            <label>Êtes-vous disponible pour les répétitions et les prestations ? :</label>
+            <div class="checkbox-group">
+                <label><input type="radio" name="available" value="Oui" required> Oui</label>
+                <label><input type="radio" name="available" value="Non" required> Non</label>
+            </div>
+
+            <label>Acceptez-vous de respecter le règlement intérieur du groupe ? :</label>
+            <div class="checkbox-group">
+                <label><input type="radio" name="commitment" value="Oui" required> Oui</label>
+                <label><input type="radio" name="commitment" value="Non" required> Non</label>
+            </div>
+
+            <label for="contribution">Souhaitez-vous apporter une contribution spécifique (organisation, logistique, finance, etc.) ? :</label>
+            <textarea id="contribution" name="contribution" rows="3"></textarea>
+
+            <label for="date">Date de l'adhésion :</label>
+            <input type="date" id="date" name="date" required>
+
+            <button type="button" onclick="sendToWhatsApp()">Envoyer l'adhésion</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Groupe CASDIV. Tous droits réservés.
+    </footer>
+
+    <!-- Page de chargement -->
+    <div id="loading">Chargement en cours...</div>
+
+    <!-- Script JavaScript -->
+    <script>
+        // Fonction pour simuler la page de chargement
+        function showLoading() {
+            document.getElementById('loading').style.display = 'block';
+            setTimeout(function () {
+                document.getElementById('loading').style.display = 'none';
+            }, 1500); // Durée du chargement simulée : 1,5 secondes
+        }
+
+        // Fonction pour naviguer entre les pages
+        function loadPage(pageId) {
+            showLoading();
+            const pages = document.getElementsByClassName('page');
+            for (let i = 0; i < pages.length; i++) {
+                pages[i].classList.remove('active');
+            }
+            document.getElementById(pageId).classList.add('active');
+        }
+
+        // Fonction pour envoyer les données du formulaire à WhatsApp
+        function sendToWhatsApp() {
+            const name = document.getElementById("name").value;
+            const dob = document.getElementById("dob").value;
+            const gender = document.getElementById("gender").value;
+            const address = document.getElementById("address").value;
+            const phone = document.getElementById("phone").value;
+            const email = document.getElementById("email").value;
+            const faith = document.getElementById("faith").value;
+            const church = document.getElementById("church").value;
+            const christianDuration = document.getElementById("christianDuration").value;
+            const baptized = document.querySelector('input[name="baptized"]:checked').value;
+            const musicalActivity = document.getElementById("musicalActivity").value;
+            const motivation = document.getElementById("motivation").value;
+            const skills = document.getElementById("skills").value;
+            const available = document.querySelector('input[name="available"]:checked').value;
+            const commitment = document.querySelector('input[name="commitment"]:checked').value;
+            const contribution = document.getElementById("contribution").value;
+            const date = document.getElementById("date").value;
+
+            const message = `Nouvelle Adhésion CASDIV:%0A
+            Nom: ${name}%0A
+            Date de Naissance: ${dob}%0A
+            Sexe: ${gender}%0A
+            Adresse: ${address}%0A
+            Téléphone: ${phone}%0A
+            Email: ${email}%0A
+            Confession de Foi: ${faith}%0A
+            Église d'Appartenance: ${church}%0A
+            Depuis combien de temps êtes-vous chrétien?: ${christianDuration}%0A
+            Êtes-vous baptisé(e)?: ${baptized}%0A
+            Engagement dans autre activité musicale: ${musicalActivity}%0A
+            Pourquoi souhaitez-vous rejoindre CASDIV?: ${motivation}%0A
+            Talent musical: ${skills}%0A
+            Disponible pour répétitions et prestations?: ${available}%0A
+            Respect du règlement intérieur?: ${commitment}%0A
+            Contribution spécifique: ${contribution}%0A
+            Date de l'adhésion: ${date}`;
+
+            const whatsappUrl1 = `https://api.whatsapp.com/send?phone=2250779946076&text=${message}`;
+            const whatsappUrl2 = `https://api.whatsapp.com/send?phone=2250779638812&text=${message}`;
+
+            window.open(whatsappUrl1, '_blank');
+            window.open(whatsappUrl2, '_blank');
+        }
+    </script>
+</body>
+</html>
